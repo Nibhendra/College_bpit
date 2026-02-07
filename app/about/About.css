@@ -1,0 +1,131 @@
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.about-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.about-text h2:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+    background: var(--bg-light-blue);
+    padding: 2rem;
+    border-left: 5px solid var(--primary-blue);
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+}
+
+.highlight-box p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+}
+
+.mission-list {
+    list-style: none;
+}
+
+.mission-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-medium);
+}
+
+.mission-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    font-weight: 800;
+}
+
+.about-image-column {
+    position: relative;
+    height: 600px;
+}
+
+.about-image {
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-1 {
+    width: 80%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.img-2 {
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border: 10px solid white;
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-column {
+        height: 400px;
+        margin-top: 3rem;
+    }
+}
