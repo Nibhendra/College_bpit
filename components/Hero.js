@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 import './Hero.css';
 
 const slides = [
@@ -85,12 +86,12 @@ const Hero = () => {
                     transition={{ delay: 0.5, duration: 0.5 }}
                     className="hero-actions"
                 >
-                    <a href="/apply" className="btn-hero-primary">
+                    <Link href="/admissions" className="btn-hero-primary">
                         Apply Now <ArrowRight size={18} />
-                    </a>
-                    <a href="/brochure" className="btn-hero-secondary">
+                    </Link>
+                    <Link href="/brochure.pdf" target="_blank" className="btn-hero-secondary">
                         Download Brochure <Download size={18} />
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
 

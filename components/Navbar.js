@@ -53,7 +53,7 @@ const Navbar = () => {
                             {item.dropdown && activeDropdown === item.name && (
                                 <div className="dropdown-menu">
                                     {item.dropdown.map((subItem) => (
-                                        <Link key={subItem} href={`/${item.name.toLowerCase()}/${subItem.toLowerCase().replace(/\s+/g, '-')}`} className="dropdown-item">
+                                        <Link key={subItem} href={item.name === 'Departments' ? `/departments/${subItem.toLowerCase()}` : `/${item.name.toLowerCase()}/${subItem.toLowerCase().replace(/\s+/g, '-')}`} className="dropdown-item">
                                             {subItem}
                                         </Link>
                                     ))}
@@ -61,7 +61,7 @@ const Navbar = () => {
                             )}
                         </div>
                     ))}
-                    <a href="/portal" className="btn-portal">Student Portal</a>
+                    <Link href="/portal" className="btn-portal">Student Portal</Link>
                 </div>
 
                 <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -76,7 +76,7 @@ const Navbar = () => {
                             {item.name}
                         </Link>
                     ))}
-                    <a href="/portal" className="mobile-link highlight">Student Portal</a>
+                    <Link href="/portal" className="mobile-link highlight" onClick={() => setIsOpen(false)}>Student Portal</Link>
                 </div>
             )}
         </nav>

@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import Link from 'next/link';
 import './Footer.css';
 
 const Footer = () => {
@@ -22,22 +23,22 @@ const Footer = () => {
                     <div className="footer-column">
                         <h4>Quick Links</h4>
                         <ul className="footer-links">
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/admissions">Admissions</a></li>
-                            <li><a href="/departments">Departments</a></li>
-                            <li><a href="/placements">Placements</a></li>
-                            <li><a href="/alumni">Alumni</a></li>
+                            <li><Link href="/about">About Us</Link></li>
+                            <li><Link href="/admissions">Admissions</Link></li>
+                            <li><Link href="/departments">Departments</Link></li>
+                            <li><Link href="/placements">Placements</Link></li>
+                            <li><Link href="/alumni">Alumni</Link></li>
                         </ul>
                     </div>
 
                     <div className="footer-column">
                         <h4>Important</h4>
                         <ul className="footer-links">
-                            <li><a href="/notices">Notices & Circulars</a></li>
-                            <li><a href="/events">Upcoming Events</a></li>
-                            <li><a href="/academic-calendar">Academic Calendar</a></li>
-                            <li><a href="/grievances">Grievances</a></li>
-                            <li><a href="/sgrc">SGRC</a></li>
+                            <li><Link href="/notices">Notices & Circulars</Link></li>
+                            <li><Link href="/events">Upcoming Events</Link></li>
+                            <li><Link href="/academic-calendar">Academic Calendar</Link></li>
+                            <li><Link href="/grievances">Grievances</Link></li>
+                            <li><Link href="/sgrc">SGRC</Link></li>
                         </ul>
                     </div>
 
@@ -63,8 +64,8 @@ const Footer = () => {
                 <div className="footer-container">
                     <p>&copy; {new Date().getFullYear()} Bhagwan Parshuram Institute of Technology. All Rights Reserved.</p>
                     <div className="footer-bottom-links">
-                        <a href="/privacy">Privacy Policy</a>
-                        <a href="/terms">Terms of Use</a>
+                        <Link href="/privacy">Privacy Policy</Link>
+                        <Link href="/terms">Terms of Use</Link>
                     </div>
                 </div>
             </div>

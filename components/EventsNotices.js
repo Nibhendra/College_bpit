@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Calendar, Bell, FileText, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import './EventsNotices.css';
 
 const EventsNotices = () => {
@@ -43,12 +44,12 @@ const EventsNotices = () => {
                                 <div className="event-details">
                                     <span className="event-date">{event.date}</span>
                                     <h3>{event.title}</h3>
-                                    <a href="#" className="read-more">View Details <ArrowRight size={14} /></a>
+                                    <Link href="/events" className="read-more">View Details <ArrowRight size={14} /></Link>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <button className="btn-view-all">View All Events</button>
+                    <Link href="/events" className="btn-view-all">View All Events</Link>
                 </div>
 
                 {/* Notices Column */}
@@ -69,7 +70,7 @@ const EventsNotices = () => {
                             ))}
                         </ul>
                     </div>
-                    <button className="btn-view-all">All Notices</button>
+                    <Link href="/notices" className="btn-view-all">All Notices</Link>
                 </div>
 
                 {/* Admissions Column */}
@@ -90,7 +91,7 @@ const EventsNotices = () => {
                             ))}
                         </ul>
                     </div>
-                    <button className="btn-view-all btn-admission">Admission Portal</button>
+                    <Link href="/admissions" className="btn-view-all btn-admission">Admission Portal</Link>
                 </div>
 
             </div>
